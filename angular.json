@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/",
             "outputPath": "dist/rx-js-tutorial-2",
             "index": "src/index.html",
             "browser": "src/main.ts",
