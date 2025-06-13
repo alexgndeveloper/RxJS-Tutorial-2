@@ -1,0 +1,162 @@
+:host {
+  font-family: "Signika", Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
+
+p {
+  margin: 0;
+}
+
+a,
+a:visited,
+a:hover {
+  color: #b7178c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9c0f77;
+}
+
+:host ::ng-deep .mat-progress-spinner circle,
+.mat-spinner circle {
+  stroke: #b7178c;
+}
+
+.mat-button-base {
+  margin: 5px;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  background-image: url("/images/Fondo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  display: flex;
+  margin: 82px auto 32px;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card.highlight-card {
+  background-color: #b7178c;
+  color: white;
+  font-weight: 600;
+  border: none;
+  width: auto;
+  min-width: 80%;
+  position: relative;
+}
+
+.card {
+  border-radius: 4px;
+  border: 1px solid #d11ca1;
+  background-color: #b7178c;
+  color: white;
+  font-weight: 600;
+  height: 40px;
+  width: 200px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+.card-container .card:not(:last-child) {
+  margin-right: 0;
+}
+
+.card-container .card:not(.highlight-card) {
+  cursor: pointer;
+}
+
+.card-container .card:not(.highlight-card):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px #f823bf;
+}
+
+.image-code{
+  width: 80%;
+  border-radius: 6px;
+}
+
+.terminal {
+  position: relative;
+  width: 80%;
+  max-width: 90%;
+  border-radius: 6px;
+  padding-top: 45px;
+  margin-top: 8px;
+  overflow: hidden;
+  background-color: rgb(15, 15, 16);
+}
+
+.terminal::before {
+  content: "\2022 \2022 \2022";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: rgb(58, 58, 58);
+  color: #c2c3c4;
+  width: 100%;
+  font-size: 2rem;
+  line-height: 0;
+  padding: 14px 0;
+  text-indent: 4px;
+}
+
+.terminal pre,
+p {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  color: white;
+  padding: 0 1rem 1rem;
+  margin: 0;
+}
+
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+}
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: -230px;
+  z-index: -10;
+  width: max-content;
+}

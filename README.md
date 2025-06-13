@@ -1,6 +1,8 @@
 # RxJSTutorial2
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+Este proyecto esta generado con:
+- [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7
+- [NodeJS](https://github.com/nodejs) version 22.3.0
 
 ## Development server
 

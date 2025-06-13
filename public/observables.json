@@ -1,0 +1,122 @@
+[
+    {
+        "info": "El operador interval se ejecuta cada vez hasta el infinito o nos desuscribamos, el perido de tiempo que le hayamos asignado en este caso 1 segundo (1000 milisegundos)",
+        "name": "interval",
+        "title": "Interval",
+        "urlImage": "images/observables/interval.png"
+    },
+    {
+        "info": "Este observable se ejecuta pasado el tiempo que le hemos asignado, en este caso 3 segundos.",
+        "name": "timer",
+        "title": "Timer",
+        "urlImage": "images/observables/timer.png"
+    },
+    {
+        "info": "Clickea en la pagina y te muestra las coordenadas, es muy parecido a un listening pero en observable.",
+        "name": "fromEvent",
+        "title": "FromEvent",
+        "urlImage": "images/observables/fromEvent.png"
+    },
+    {
+        "info": "El operador Map aplica una función a cada valor, en este caso vamos a realizar una operacion matematica para mostrar el número al cuadrado de la lista 1,2,3,4,5.",
+        "name": "map",
+        "title": "Map",
+        "urlImage": "images/observables/map.png"
+    },
+    {
+        "info": "Filtramos los números pares de una lista con 1,2,3,4,5 y nos suscribimos para mostrarlos.",
+        "name": "filter",
+        "title": "Filter",
+        "urlImage": "images/observables/filter.png"
+    },
+    {
+        "info": "El operador Tap sirve para ejecutar acciones colaterales, en caso de a ver un error lo mostraria. Cuando hagamos click nos mostrara el evento.",
+        "name": "tap",
+        "title": "Tap",
+        "urlImage": "images/observables/tap.png"
+    },
+    {
+        "info": "El operador Share sirve para ejecutar varias suscripciones a la vez. En este caso estamos ejecutando 4 suscripciones a la vez.",
+        "name": "share",
+        "title": "Share",
+        "urlImage": "images/observables/share.png"
+    },
+    {
+        "info": "El operador Concat, concatena varios Observables y los ejecuta consecutivamente. Primero vamos a ejecutar un interval hasta 4 y despues ejecutamos un range del 1 al 10.",
+        "name": "concat",
+        "title": "Concat",
+        "urlImage": "images/observables/concat.png"
+    },
+    {
+        "info": "Vamos a ver como funciona una suscripción. Next, Error y Complete.",
+        "name": "nextErrorComplete",
+        "title": "Next Error Complete",
+        "urlImage": "images/observables/nextErrorComplete.png"
+    },
+    {
+        "info": "El operador BufferTime, almacena durante el tiempo en milisegundos que le pasemos como parametro el observable con el que le llamamos. En este caso en interval de medio segundo que devulve un valor númerico, entonces el interval se ejecuta cada medio segundo y el bufferTimer cada 2 segundos mostrando el interval.",
+        "name": "bufferTime",
+        "title": "BufferTime",
+        "urlImage": "images/observables/bufferTime.png"
+    },
+    {
+        "info": "El operador SwitchMap, cuando clickemos en la pagina va a volver empezar el observable y cuando volvamos a hacer click vuelve a empezar otra vez.",
+        "name": "switchMap",
+        "title": "SwitchMap",
+        "urlImage": "images/observables/switchMap.png"
+    },
+    {
+        "info": "El operador ForkJoin, es un operador de convinacion y nos permite fusionarlas. Une todos los observables y lo ejecuta cuando todas las observables han terminado y en orden.",
+        "name": "forkJoin",
+        "title": "ForkJoin",
+        "urlImage": "images/observables/forkJoin.png"
+    },
+    {
+        "info": "El operador ConcatMap, vamos a recibir un of con tres valores 2000, 1000 y 3000 que se van a ejecutar en ese orden y en ese tiempo, la diferencia con Concat es que Concat concatena observables y ConcatMap concatena los datos de un observable y los procesa uno a uno.",
+        "name": "concatMap",
+        "title": "ConcatMap",
+        "urlImage": "images/observables/concatMap.png"
+    },
+    {
+        "info": "El operador MergeMap, es muy parecido a ConcatMap solo que MergeMap no los devuelve en orden si no cuando se emitan. Vamos a obtener los datos de varias llamadas a la API y nos lo va a devolver segun los vaya obteniendo.",
+        "name": "mergeMap",
+        "title": "MergeMap",
+        "urlImage": "images/observables/mergeMap.png"
+    },
+    {
+        "info": "El operador Scan, es un observable en el que podemos realizar comprobaciones o lo que necesitemos con los valores recibidos. En este caso sumaremos el primer valor con el segundo, los valores son: 1, 2, 3, 4 y 5.",
+        "name": "scan",
+        "title": "Scan",
+        "urlImage": "images/observables/scan.png"
+    },
+    {
+        "info": "El operador Subject, es un observable que puede tener multiples suscripciones. En este caso nos vamos a subcribir a dos suscripciones, una que nos muestre el valor y otra el valor + 100. Lo vamos a llamar dos veces con los valores de 1 y 2.",
+        "name": "subject",
+        "title": "Subject",
+        "urlImage": "images/observables/subject.png"
+    },
+    {
+        "info": "El operador Multicast, nos sirve para poder ejecutar varias suscripciones a la vez. En este caso vamos a obtener un ID y lo vamos a utilizar en las dos suscripciones, el Id que recibimos y en la otra ese Id menos 1. Hemos realizado una comprobacion de si el Id es 0 no muestre el negativo.",
+        "name": "multicast",
+        "title": "Multicast Subject",
+        "urlImage": "images/observables/multicast.png"
+    },
+    {
+        "info": "Behaviour Subject nos permite utilizar una característica realmente útil y que es la de poder \"recodar\" el último valor emitido por el Observable a todas las nuevas subscripciones, al margen del momento temporal en que éstas se establezcan, actuando como un mencanismo de \"sincronización\" entre todas las subscripciones que resulta realmente últil.",
+        "name": "behaviorSubject",
+        "title": "BehaviorSubject",
+        "urlImage": "images/observables/behaviorSubject.png"
+    },
+    {
+        "info": "Replay Subject funciona de la misma forma que Behaviour Subject, pero así como Behaviour Subject solo tiene la habilidad de recordar el último valor emitido, con Replay Subject vamos a poder configurar el número de valores que queremos recordar a las nuevas subscripciones. En este caso vamos a ejecutar un interval que nos va a ir diciendo los segundos y un Click que nos dice donde hemos clickado. Es muy interesate por ejemplo para hacer un mapa de calor.",
+        "name": "replaySubject",
+        "title": "ReplaySubject",
+        "urlImage": "images/observables/replaySubject.png"
+    },
+    {
+        "info": "DebounceTime, es un operador para ejecutar algo en el tiempo en milisegundos que le enviamos como parametro. En este ejemplo vamos a escribir en un input y se va a ejecutar pasado un segundo, es muy interesante para buscar. No llamar a una API cada vez que escribimos algo. En este caso vamos a clickear en la pagina y al cabo de un segundo nos va a decir la posicion X.",
+        "name": "debounceTime",
+        "title": "DebounceTime",
+        "urlImage": "images/observables/debounceTime.png"
+    }
+]
