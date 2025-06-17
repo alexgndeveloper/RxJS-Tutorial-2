@@ -16,7 +16,7 @@
 
     <div class="flex flex-wrap">
       @for (observable of observables; track $index) {
-        <div class="card" tabindex="0"
+        <div class="card cursor-pointer" tabindex="0"
           (click)="observableMethods(observable)">
           <span>{{ observable.title }}</span>
         </div>
